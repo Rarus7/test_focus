@@ -1,2 +1,2 @@
 # test_focus
-initial stage 3
+initial stage 0
