@@ -5,20 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="16dp"
+    android:paddingHorizontal="@dimen/main_horizontal_padding"
     tools:context=".presentation.registration.RegistrationFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="38dp"
-        android:paddingTop="16dp"
+        android:paddingBottom="@dimen/head_bottom_padding"
+        android:paddingTop="@dimen/head_top_padding"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/logoView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/logo_image"
             android:src="@drawable/ic_label" />
 
         <View
@@ -29,14 +30,15 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left">
+            android:gravity="start">
 
             <ImageView
                 android:id="@+id/arrowView"
                 android:layout_width="wrap_content"
-                android:layout_height="13dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingHorizontal="16dp"
+                android:contentDescription="@string/arrow_image"
+                android:paddingHorizontal="@dimen/main_horizontal_padding"
                 android:src="@drawable/ic_arrow_left" />
 
             <ImageView
@@ -44,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:contentDescription="@string/user_image"
                 android:src="@drawable/ic_user" />
 
         </LinearLayout>
@@ -60,61 +63,62 @@
         android:id="@+id/registrationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/geologica"
+        android:fontFamily="@font/geologica_roman_regular"
         android:gravity="center"
         android:paddingVertical="16dp"
-        android:text="Регистрация"
+        android:text="@string/registration_text"
         android:textSize="26sp" />
 
     <EditText
         android:id="@+id/nameEditText"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:hint="Имя"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="username"
         android:background="@drawable/input_rounded"
+        android:fontFamily="@font/noto_sans_hk"
+        android:hint="@string/name_edit_hint"
+        android:inputType="text"
         android:textColor="#000000"
         android:textColorHint="#808080"
-        android:inputType="text"
-        android:minHeight="32dp"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:hint="email"
+        android:layout_height="@dimen/edittext_height"
+        android:autofillHints="emailAddress"
+        android:hint="@string/email_edit_hint"
         android:background="@drawable/input_rounded"
         android:textColor="#000000"
         android:textColorHint="#808080"
         android:inputType="textEmailAddress"
-        android:minHeight="32dp"
         android:textSize="16sp"
         android:layout_marginBottom="16dp" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:hint="***"
+        android:layout_height="@dimen/edittext_height"
+        android:autofillHints="password"
+        android:hint="@string/password_edit_hint"
         android:background="@drawable/input_rounded"
         android:textColor="#000000"
         android:textColorHint="#808080"
         android:inputType="textPassword"
-        android:minHeight="32dp"
         android:textSize="16sp"
         android:layout_marginBottom="16dp" />
 
     <EditText
         android:id="@+id/confirmPasswordEditText"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:hint="***"
+        android:layout_height="@dimen/edittext_height"
+        android:autofillHints="password"
+        android:hint="@string/password_edit_hint"
         android:background="@drawable/input_rounded"
         android:textColor="#000000"
         android:textColorHint="#808080"
         android:inputType="textPassword"
-        android:minHeight="32dp"
         android:textSize="16sp"
         android:layout_marginBottom="16dp" />
 
@@ -128,10 +132,10 @@
             android:id="@+id/haveAccountButton"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Есть аккаунт"
+            android:text="@string/have_account_text"
             android:textColor="#222222"
             android:layout_weight="1"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
             app:cornerRadius="28dp"
             app:backgroundTint="#00ffffff"
             android:textSize="16sp"
@@ -144,9 +148,9 @@
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Сохранить"
+            android:text="@string/save_text"
             android:layout_weight="1"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             app:cornerRadius="28dp"
             app:backgroundTint="#FFD700"
             android:textColor="#222222"

@@ -4,6 +4,7 @@ import android.util.Log
 import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.rarus7.test_focus.R
 import com.rarus7.test_focus.domain.model.User
 import com.rarus7.test_focus.domain.usecase.CheckIfEmailExistsUseCase
 import com.rarus7.test_focus.domain.usecase.SaveUserUseCase

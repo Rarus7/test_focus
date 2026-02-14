@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">test_focus</string>
+    <string name="app_name" translatable="false">test_focus</string>
+    <string name="logo_image">logo</string>
+    <string name="arrow_image">arrow</string>
+    <string name="user_image">user</string>
+    <string name="registration_text">Регистрация</string>
+    <string name="name_edit_hint">Name</string>
+    <string name="email_edit_hint">email</string>
+    <string name="password_edit_hint">***</string>
+    <string name="have_account_text">Have account</string>
+    <string name="save_text">Save</string>
+    <string name="name_requirement">The name must be between 1 and 35 characters long</string>
 </resources>

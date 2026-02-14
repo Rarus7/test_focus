@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="black_text">#222222</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey_cunt">#8E9B9A</color>
+    <color name="yellow_button">#F7E221</color>
+    <color name="dark_fon">#F6F6F6</color>
+    <color name="black_time">#171D1B</color>
+    <color name="green">#00ff00</color>
+
 </resources>
