@@ -13,4 +13,8 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun saveUser(user: User) {
         dao.insert(user.toEntity())
     }
+
+    override suspend fun checkEmail(email: String): Boolean {
+        return dao.getUserByEmail(email) != null
+    }
 }
