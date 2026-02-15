@@ -8,5 +8,6 @@
     <color name="dark_fon">#F6F6F6</color>
     <color name="black_time">#171D1B</color>
     <color name="green">#00ff00</color>
+    <color name="text_hint">#808080</color>
 
 </resources>

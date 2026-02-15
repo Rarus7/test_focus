@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -65,98 +64,114 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/geologica_roman_regular"
         android:gravity="center"
-        android:paddingVertical="16dp"
+        android:paddingVertical="@dimen/spacing_md"
         android:text="@string/registration_text"
-        android:textSize="26sp" />
+        android:textSize="@dimen/text_size_title" />
 
     <EditText
         android:id="@+id/nameEditText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edittext_height"
-        android:layout_marginBottom="16dp"
         android:autofillHints="username"
         android:background="@drawable/input_rounded"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
         android:fontFamily="@font/noto_sans_hk"
         android:hint="@string/name_edit_hint"
         android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#808080"
-        android:textSize="16sp" />
+        android:textColor="@color/black_text"
+        android:textColorHint="@color/text_hint"
+        android:textSize="@dimen/text_size_body"
+        android:layout_marginBottom="@dimen/spacing_md" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edittext_height"
         android:autofillHints="emailAddress"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/noto_sans_hk"
         android:hint="@string/email_edit_hint"
         android:background="@drawable/input_rounded"
-        android:textColor="#000000"
-        android:textColorHint="#808080"
+        android:textColor="@color/black_text"
+        android:textColorHint="@color/text_hint"
         android:inputType="textEmailAddress"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="@dimen/text_size_body"
+        android:layout_marginBottom="@dimen/spacing_md" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edittext_height"
         android:autofillHints="password"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/noto_sans_hk"
         android:hint="@string/password_edit_hint"
         android:background="@drawable/input_rounded"
-        android:textColor="#000000"
-        android:textColorHint="#808080"
+        android:textColor="@color/black_text"
+        android:textColorHint="@color/text_hint"
         android:inputType="textPassword"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="@dimen/text_size_body"
+        android:layout_marginBottom="@dimen/spacing_md" />
 
     <EditText
         android:id="@+id/confirmPasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edittext_height"
         android:autofillHints="password"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/noto_sans_hk"
         android:hint="@string/password_edit_hint"
         android:background="@drawable/input_rounded"
         android:textColor="#000000"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/text_hint"
         android:inputType="textPassword"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="@dimen/text_size_body"
+        android:layout_marginBottom="@dimen/spacing_xl" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
-        <com.google.android.material.button.MaterialButton
+        <!-- Левая кнопка -->
+        <TextView
             android:id="@+id/haveAccountButton"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/have_account_text"
-            android:textColor="#222222"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_size"
             android:layout_weight="1"
-            android:layout_marginEnd="16dp"
-            app:cornerRadius="28dp"
-            app:backgroundTint="#00ffffff"
-            android:textSize="16sp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#222222"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp" />
+            android:layout_marginEnd="@dimen/spacing_md"
 
-        <com.google.android.material.button.MaterialButton
+            android:gravity="center"
+            android:text="@string/have_account_text"
+            android:textSize="@dimen/text_size_body"
+            android:textColor="@color/black_text"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_hk"
+
+            android:background="@drawable/bg_outline_button"
+            android:clickable="true" />
+
+        <!-- Правая кнопка -->
+        <TextView
             android:id="@+id/registerButton"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/save_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_size"
             android:layout_weight="1"
-            android:layout_marginStart="16dp"
-            app:cornerRadius="28dp"
-            app:backgroundTint="#FFD700"
-            android:textColor="#222222"
-            android:textSize="16sp"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp" />
+            android:layout_marginStart="@dimen/spacing_md"
+
+            android:gravity="center"
+            android:text="@string/save_text"
+            android:textSize="@dimen/text_size_body"
+            android:textColor="@color/black_text"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_hk"
+
+            android:background="@drawable/bg_filled_button"
+            android:clickable="true" />
 
     </LinearLayout>
 

@@ -7,10 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.View
 
 import android.widget.Toast
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.rarus7.test_focus.R
 import com.rarus7.test_focus.databinding.FragmentRegistrationBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class RegistrationFragment :
@@ -40,9 +43,11 @@ class RegistrationFragment :
 
     private fun observe() {
 
-        lifecycleScope.launchWhenStarted {
-            vm.toast.collect {
-                Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                vm.toast.collect {
+                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
